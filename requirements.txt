@@ -1,0 +1,19 @@
+# LeafLens AI Backend — Python Dependencies
+#
+# Install: pip install -r requirements.txt
+#
+# For GPU inference (faster):
+#   pip install tensorflow[and-cuda]>=2.15.0
+#   (or install tensorflow-gpu for older TF versions)
+#
+# For CPU-only inference (smaller install, ~500MB vs ~3GB):
+#   pip install tensorflow-cpu>=2.15.0
+#   Then change the tensorflow line below to tensorflow-cpu
+
+tensorflow>=2.15.0
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.6
+Pillow>=10.2.0
+numpy>=1.24.0
+pydantic>=2.0.0
