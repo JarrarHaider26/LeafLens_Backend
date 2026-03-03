@@ -1,0 +1,16 @@
+# Render Blueprint for LeafLens AI Backend
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: leaflens-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: MODEL_PATH
+        value: ./Model/best_phase2.keras
+      - key: PYTHON_VERSION
+        value: "3.11"
+    healthCheckPath: /health
+    autoDeploy: true
